@@ -1,20 +1,20 @@
 ## Population-based Phenotype Characterization
 
-This use case demonstrates how to analyze histopathological features contained in whole-slide-images of large patient populations using HistoML.
+This use case demonstrates how to analyze histopathological features contained in whole-slide-images of large patient populations using PathoML.
 
 #### Important Files
 
 Grade1~3.rq & Endothelial.rq: Sparql queries for 4 types of cells.
 
-Analysis.java: Source code of generating HistoML representations and run Sparql queries.
+Analysis.java: Source code of generating PathoML representations and run Sparql queries.
 
 Execute.py: Execute the use case.
 
-Representation folder: HistoML representations used in this use case.
+Representation folder: PathoML representations used in this use case.
 
 #### How to Use
 
-In this use cases, HistoML representations of ccRCC slides are in "Representation" folder. The original CCRCC Nuclei Grading Dataset can be downloaded from [here](https://dataset.chenli.group/home/ccrcc-grading). This dataset contains 1,000 512x512 images for CCRCC Nuclei Grading and Segmentation tasks.
+In this use cases, PathoML representations of ccRCC slides are in "Representation" folder. The original CCRCC Nuclei Grading Dataset can be downloaded from [here](https://dataset.chenli.group/home/ccrcc-grading). This dataset contains 1,000 512x512 images for CCRCC Nuclei Grading and Segmentation tasks.
 
 Run the use case:
 

@@ -1,18 +1,18 @@
 ## Automatic Diagnosis
 
-This use case demonstrates how to automatically add a diagnosis to a HistoML representation based on a diagnostic criterion.
+This use case demonstrates how to automatically add a diagnosis to a PathoML representation based on a diagnostic criterion.
 
 #### Important Files
 
-PathoML.owl: Ontology specification of HistoML.
+PathoML.owl: Ontology specification of PathoML.
 
-Tumor Pathology Ontology Simplified.owl: The logic of the diagnostic criterion is represented in Histopathology Ontology.
+Tumor Pathology Ontology Simplified.owl: The logic of the diagnostic criterion is represented in Tumor Pathology Ontology .
 
 Diagnosing.java: Source code of automatic diagnosis.
 
-Automatic Subtyping.xml: The input HistoML representation of a slide with several histopathological phenotypes detected while lacking a diagnosis of a certain diagnostic criterion.
+Automatic Subtyping.xml: The input PathoML representation of a slide with several histopathological phenotypes detected while lacking a subtyping diagnosis.
 
-Automatic Subtyping Diagnosis.xml: The output HistoML representation of the slide which involves the generated diagnostic result.
+Automatic Subtyping Diagnosis.xml: The output PathoML representation of the slide which involves the generated diagnostic result.
 
 #### How to Use
 
@@ -44,6 +44,6 @@ The output is an illustration of a two-step reasoning process of ontology reason
   1. Firstly, the reasoner subtypes the slide as **Human Papillomavirus-Related Endocervical Adenocarcinoma** whose evidences are the two histopathological phenotypes of the slide named "**Glandular_Pattern4**" and "**Glandular_Pattern5**" in Automatic Subtyping.xml; the official guideline on which the first step of reasoning is based is **Female Genital Tumours: WHO Classification of Tumours (Medicine) 5th Edition**, its isbn number is **9283245040** and the quotation is "Hallmarks of HPV-associated endocervical adenocarcinoma architecture include apical mitoses and karyorrhexis, conspicuous and identifiable at low-power magnification". 
   2. Based on the diagnostic result of the first step as well as **Quantitative_Metric1**, the reasoner further subtypes the slide as **HPV-associated, usual type** with the evidences and citation of the guideline provided as well.
 
-#### Why using a simplified Histopathology Ontology instead of a complete one?
-Reasoning over a simplified Histopathology Ontology which contains only the necessary classes and axioms for automatic diagnosis is more time-efficient than a complete Histopathology Ontology through ontology reasoner.
+#### Why using a simplified Tumor Pathology Ontology instead of a complete one?
+Reasoning over a simplified Tumor Pathology Ontology which contains only the necessary classes and axioms for automatic diagnosis is more time-efficient than a complete Tumor Pathology Ontology through ontology reasoner.
 

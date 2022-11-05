@@ -376,7 +376,6 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:range rdf:resource="https://pathoml-1308125782.cos.ap-chengdu.myqcloud.com/PathoML.owl#Evidence"/>
         <rdfs:comment>Scientific evidence supporting the existence of the entity as described.</rdfs:comment>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
@@ -1079,7 +1078,6 @@
         <rdfs:subClassOf rdf:resource="https://pathoml-1308125782.cos.ap-chengdu.myqcloud.com/PathoML.owl#Utility"/>
         <owl:disjointWith rdf:resource="https://pathoml-1308125782.cos.ap-chengdu.myqcloud.com/PathoML.owl#EntityAttribute"/>
         <owl:disjointWith rdf:resource="https://pathoml-1308125782.cos.ap-chengdu.myqcloud.com/PathoML.owl#EntityReference"/>
-        <owl:disjointWith rdf:resource="https://pathoml-1308125782.cos.ap-chengdu.myqcloud.com/PathoML.owl#Evidence"/>
         <owl:disjointWith rdf:resource="https://pathoml-1308125782.cos.ap-chengdu.myqcloud.com/PathoML.owl#Provenance"/>
         <owl:disjointWith rdf:resource="https://pathoml-1308125782.cos.ap-chengdu.myqcloud.com/PathoML.owl#Quantification"/>
         <owl:disjointWith rdf:resource="https://pathoml-1308125782.cos.ap-chengdu.myqcloud.com/PathoML.owl#Relationship"/>
@@ -1148,7 +1146,6 @@
     <owl:Class rdf:about="https://pathoml-1308125782.cos.ap-chengdu.myqcloud.com/PathoML.owl#EntityAttribute">
         <rdfs:subClassOf rdf:resource="https://pathoml-1308125782.cos.ap-chengdu.myqcloud.com/PathoML.owl#Utility"/>
         <owl:disjointWith rdf:resource="https://pathoml-1308125782.cos.ap-chengdu.myqcloud.com/PathoML.owl#EntityReference"/>
-        <owl:disjointWith rdf:resource="https://pathoml-1308125782.cos.ap-chengdu.myqcloud.com/PathoML.owl#Evidence"/>
         <owl:disjointWith rdf:resource="https://pathoml-1308125782.cos.ap-chengdu.myqcloud.com/PathoML.owl#Provenance"/>
         <owl:disjointWith rdf:resource="https://pathoml-1308125782.cos.ap-chengdu.myqcloud.com/PathoML.owl#Quantification"/>
         <owl:disjointWith rdf:resource="https://pathoml-1308125782.cos.ap-chengdu.myqcloud.com/PathoML.owl#Relationship"/>
@@ -1163,27 +1160,12 @@
 
     <owl:Class rdf:about="https://pathoml-1308125782.cos.ap-chengdu.myqcloud.com/PathoML.owl#EntityReference">
         <rdfs:subClassOf rdf:resource="https://pathoml-1308125782.cos.ap-chengdu.myqcloud.com/PathoML.owl#Utility"/>
-        <owl:disjointWith rdf:resource="https://pathoml-1308125782.cos.ap-chengdu.myqcloud.com/PathoML.owl#Evidence"/>
         <owl:disjointWith rdf:resource="https://pathoml-1308125782.cos.ap-chengdu.myqcloud.com/PathoML.owl#Provenance"/>
         <owl:disjointWith rdf:resource="https://pathoml-1308125782.cos.ap-chengdu.myqcloud.com/PathoML.owl#Quantification"/>
         <owl:disjointWith rdf:resource="https://pathoml-1308125782.cos.ap-chengdu.myqcloud.com/PathoML.owl#Relationship"/>
         <owl:disjointWith rdf:resource="https://pathoml-1308125782.cos.ap-chengdu.myqcloud.com/PathoML.owl#Xref"/>
         <rdfs:comment>An entity reference is a grouping of several physical entities with multiple states that are often named and treated as a single entity by pathologists. EntityReference instances store the information common to a set of entities in various states. For example, the morphology of a tumor cell of clear cell renal cell carcinoma (ccRCC) undergoes changes as it evolves including nuclear changes, cytoplasmic changes; any ccRCC tumor cell in one of the states is represented as an individual of NeoplasticCell while a generic ccRCC tumor cell is represented as an individual of CellReference (child of EntityReference). The EntityReference is important because it explicitly links multiple physical entities representing different states of a generic entity, which would otherwise be difficult to recognize as related.</rdfs:comment>
         <rdfs:comment>When defining the external cross-references of the instances of this class, PathoML recommends using &quot;Anatomical entity&quot; as well as its sub-classes from Tumor Pathology Ontology.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- https://pathoml-1308125782.cos.ap-chengdu.myqcloud.com/PathoML.owl#Evidence -->
-
-    <owl:Class rdf:about="https://pathoml-1308125782.cos.ap-chengdu.myqcloud.com/PathoML.owl#Evidence">
-        <rdfs:subClassOf rdf:resource="https://pathoml-1308125782.cos.ap-chengdu.myqcloud.com/PathoML.owl#Utility"/>
-        <owl:disjointWith rdf:resource="https://pathoml-1308125782.cos.ap-chengdu.myqcloud.com/PathoML.owl#Provenance"/>
-        <owl:disjointWith rdf:resource="https://pathoml-1308125782.cos.ap-chengdu.myqcloud.com/PathoML.owl#Quantification"/>
-        <owl:disjointWith rdf:resource="https://pathoml-1308125782.cos.ap-chengdu.myqcloud.com/PathoML.owl#Relationship"/>
-        <owl:disjointWith rdf:resource="https://pathoml-1308125782.cos.ap-chengdu.myqcloud.com/PathoML.owl#Xref"/>
-        <rdfs:comment>The scientific support for an assertion in a PathML representation. Evidence class has 2 properties: hasXref and comment. hasXref would reference a publication describing the evidence using a PublicationXref; the content of the evidence should be the value of comment. An assertion might have more than one Evidence; the relevant guidelines and papers can be included to provide more information.</rdfs:comment>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 

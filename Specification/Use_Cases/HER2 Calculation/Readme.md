@@ -1,12 +1,12 @@
 ## HER2 Phenotype Characterization
 
-This use case demonstrate how to calculate HER2 using HistoML.
+This use case demonstrate how to calculate HER2 using PathoML.
 
 #### Important Files
 
-* HER2_Calculation.xml: HistoML representation file of a HER2 phenotype.
-* Stroma.rq and Lymphocytes.rq: Sparql queries for stroma components and lymphocytes.
-* Annotation.db: Area annotation of the cell membranes and nucleolus.
+* HER2_Calculation.xml: PathoML representation file of a slide stained using HER2.
+* Cell.rq, Membrane.rq, Nucleus.rq: Sparql queries for cells as well as their membranes and nuclei .
+* Annotation.db: Area annotation of the cell membranes and nuclei.
 * CalculateHER2.java: Java code to execute Sparql queries and calculate HER2.
 * Execute.py: Execute the use case.
 
